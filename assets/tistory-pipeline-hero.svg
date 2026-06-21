@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#007AFF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#34C759;stop-opacity:1"/>
+    </linearGradient>
+    <marker id="arrBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#007AFF"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#FFFFFF"/>
+  <!-- Top accent bar gradient -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#heroGrad)"/>
+
+  <!-- Title area -->
+  <text x="600" y="58" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="30" font-weight="700" fill="#1D1D1F">마크다운 &#8594; 티스토리 자동발행 파이프라인</text>
+  <text x="600" y="90" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="14" fill="#6E6E73">Tistory Open API 폐쇄 이후 · Playwright DOM 자동화 · GitHub 이미지 호스팅</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="110" x2="1140" y2="110" stroke="#E5E5EA" stroke-width="1"/>
+
+  <!-- LEFT CARD: MD 파일 -->
+  <rect x="60" y="128" width="235" height="248" rx="14" fill="#F5FFF8" stroke="#34C759" stroke-width="1.5"/>
+  <rect x="60" y="128" width="235" height="50" rx="14" fill="#34C759" opacity="0.12"/>
+  <text x="178" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="15" font-weight="700" fill="#1A7A35">마크다운 파일</text>
+
+  <!-- File icon -->
+  <rect x="142" y="192" width="72" height="86" rx="6" fill="#FFFFFF" stroke="#34C759" stroke-width="1.5"/>
+  <rect x="185" y="192" width="29" height="22" rx="3" fill="#34C759" opacity="0.25"/>
+  <line x1="155" y1="240" x2="202" y2="240" stroke="#E5E5EA" stroke-width="1"/>
+  <line x1="155" y1="254" x2="202" y2="254" stroke="#E5E5EA" stroke-width="1"/>
+  <line x1="155" y1="268" x2="185" y2="268" stroke="#E5E5EA" stroke-width="1"/>
+  <text x="178" y="219" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#34C759">.md</text>
+
+  <text x="178" y="300" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#6E6E73">Obsidian에서 작성</text>
+  <text x="178" y="320" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#6E6E73">로컬 저장 · 프론트매터</text>
+  <text x="178" y="355" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#34C759">입력 소스</text>
+
+  <!-- Arrow 1 -->
+  <line x1="300" y1="252" x2="356" y2="252" stroke="#007AFF" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="328" y="243" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#007AFF">자동화</text>
+
+  <!-- MIDDLE CARD: Pipeline -->
+  <rect x="360" y="128" width="480" height="248" rx="14" fill="#F5F7FF" stroke="#007AFF" stroke-width="2"/>
+  <rect x="360" y="128" width="480" height="50" rx="14" fill="#007AFF" opacity="0.1"/>
+  <text x="600" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="15" font-weight="700" fill="#0040CC">자동화 파이프라인 4단계</text>
+
+  <!-- Step badges inside middle card -->
+  <!-- Step 1 -->
+  <rect x="380" y="188" width="207" height="68" rx="10" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1"/>
+  <circle cx="400" cy="215" r="12" fill="#007AFF"/>
+  <text x="400" y="219" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="420" y="213" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" font-weight="600" fill="#1D1D1F">GitHub 이미지 호스팅</text>
+  <text x="420" y="231" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">public raw URL 절대 경로</text>
+  <text x="380" y="248" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#AEAEB2">  curl 200 응답 검증</text>
+
+  <!-- Step 2 -->
+  <rect x="595" y="188" width="225" height="68" rx="10" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1"/>
+  <circle cx="615" cy="215" r="12" fill="#AF52DE"/>
+  <text x="615" y="219" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="635" y="213" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" font-weight="600" fill="#1D1D1F">MD 변환</text>
+  <text x="635" y="231" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">프론트매터 제거 · HTML 변환</text>
+  <text x="595" y="248" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#AEAEB2">  제목 추출 · 이미지 URL 치환</text>
+
+  <!-- Step 3 -->
+  <rect x="380" y="270" width="207" height="68" rx="10" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1"/>
+  <circle cx="400" cy="297" r="12" fill="#FF9500"/>
+  <text x="400" y="301" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="420" y="295" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" font-weight="600" fill="#1D1D1F">Playwright 주입</text>
+  <text x="420" y="313" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">TinyMCE · 제목·본문·카테고리·태그</text>
+  <text x="380" y="330" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#AEAEB2">  쿠키 로그인 세션 기반</text>
+
+  <!-- Step 4 -->
+  <rect x="595" y="270" width="225" height="68" rx="10" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1"/>
+  <circle cx="615" cy="297" r="12" fill="#34C759"/>
+  <text x="615" y="301" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="635" y="295" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" font-weight="600" fill="#1D1D1F">사람 검토 후 발행</text>
+  <text x="635" y="313" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">발행 버튼은 사람이 누름</text>
+  <text x="595" y="330" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#AEAEB2">  의도적 안전장치</text>
+
+  <!-- Arrow 2 -->
+  <line x1="845" y1="252" x2="901" y2="252" stroke="#007AFF" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="873" y="243" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#007AFF">발행</text>
+
+  <!-- RIGHT CARD: 티스토리 -->
+  <rect x="905" y="128" width="235" height="248" rx="14" fill="#FFF8F5" stroke="#FF6B2B" stroke-width="1.5"/>
+  <rect x="905" y="128" width="235" height="50" rx="14" fill="#FF6B2B" opacity="0.12"/>
+  <text x="1023" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="15" font-weight="700" fill="#C03A00">티스토리 발행</text>
+
+  <!-- Blog post icon -->
+  <rect x="967" y="185" width="110" height="88" rx="8" fill="#FFFFFF" stroke="#FF6B2B" stroke-width="1.5"/>
+  <rect x="967" y="185" width="110" height="26" rx="8" fill="#FF6B2B" opacity="0.15"/>
+  <text x="1022" y="203" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#C03A00">tistory</text>
+  <line x1="980" y1="225" x2="1064" y2="225" stroke="#E5E5EA" stroke-width="1"/>
+  <line x1="980" y1="238" x2="1064" y2="238" stroke="#E5E5EA" stroke-width="1"/>
+  <line x1="980" y1="251" x2="1040" y2="251" stroke="#E5E5EA" stroke-width="1"/>
+  <line x1="980" y1="264" x2="1064" y2="264" stroke="#E5E5EA" stroke-width="1"/>
+
+  <text x="1023" y="300" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#6E6E73">글 제목·본문·이미지</text>
+  <text x="1023" y="320" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#6E6E73">카테고리·태그 포함</text>
+  <text x="1023" y="355" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#FF6B2B">공개 발행</text>
+
+  <!-- Footer -->
+  <line x1="60" y1="395" x2="1140" y2="395" stroke="#E5E5EA" stroke-width="1"/>
+  <text x="600" y="425" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" fill="#6E6E73">API 없이 · 브라우저 DOM 직접 조작 · 10~20분 수작업을 5분으로</text>
+  <text x="600" y="458" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#AEAEB2">Allen · privatelabs.io</text>
+</svg>

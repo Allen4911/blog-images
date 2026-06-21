@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="wikiCurve" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="chatCurve" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#374151"/>
+      <stop offset="100%" style="stop-color:#6b7280"/>
+    </linearGradient>
+    <linearGradient id="fillWiki" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">The Compounding Effect</text>
+  <text x="450" y="62" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#64748b">LLM Wiki value grows over time. Chat sessions reset to zero every day.</text>
+
+  <!-- Chart area -->
+  <!-- Axes -->
+  <line x1="80" y1="300" x2="820" y2="300" stroke="#334155" stroke-width="1.5"/>
+  <line x1="80" y1="100" x2="80" y2="300" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Y axis label -->
+  <text x="30" y="205" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b" transform="rotate(-90, 30, 205)">Knowledge Value</text>
+
+  <!-- X axis ticks and labels -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    <line x1="80" y1="300" x2="80" y2="308" stroke="#334155"/>
+    <text x="80" y="322">Day 1</text>
+
+    <line x1="230" y1="300" x2="230" y2="308" stroke="#334155"/>
+    <text x="230" y="322">Month 1</text>
+
+    <line x1="380" y1="300" x2="380" y2="308" stroke="#334155"/>
+    <text x="380" y="322">Month 3</text>
+
+    <line x1="530" y1="300" x2="530" y2="308" stroke="#334155"/>
+    <text x="530" y="322">Month 6</text>
+
+    <line x1="680" y1="300" x2="680" y2="308" stroke="#334155"/>
+    <text x="680" y="322">Month 9</text>
+
+    <line x1="820" y1="300" x2="820" y2="308" stroke="#334155"/>
+    <text x="820" y="322">Month 12</text>
+  </g>
+
+  <!-- Y axis ticks -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="end">
+    <line x1="72" y1="300" x2="80" y2="300" stroke="#334155"/>
+    <text x="68" y="304">0</text>
+    <line x1="72" y1="233" x2="80" y2="233" stroke="#334155"/>
+    <text x="68" y="237">Low</text>
+    <line x1="72" y1="166" x2="80" y2="166" stroke="#334155"/>
+    <text x="68" y="170">Mid</text>
+    <line x1="72" y1="100" x2="80" y2="100" stroke="#334155"/>
+    <text x="68" y="104">High</text>
+  </g>
+
+  <!-- Horizontal guide lines -->
+  <g stroke="#1e293b" stroke-width="1" stroke-dasharray="4,6">
+    <line x1="80" y1="233" x2="820" y2="233"/>
+    <line x1="80" y1="166" x2="820" y2="166"/>
+    <line x1="80" y1="100" x2="820" y2="100"/>
+  </g>
+
+  <!-- Chat sessions line (flat/reset) -->
+  <!-- Represents repeated chat sessions that reset -->
+  <g stroke="#6b7280" stroke-width="2" fill="none" stroke-dasharray="8,4">
+    <!-- Multiple short segments showing reset pattern -->
+    <polyline points="80,285 150,260 155,285 225,262 230,285 300,258 305,285 375,256 380,285 450,252 455,285 525,248 530,285 600,244 605,285 675,240 680,285 750,236 755,285 820,230"/>
+  </g>
+
+  <!-- Wiki fill area -->
+  <path d="M 80,300 C 130,298 200,292 280,278 C 360,262 430,240 510,210 C 590,178 660,150 740,124 C 780,111 800,105 820,100 L 820,300 Z"
+        fill="url(#fillWiki)"/>
+
+  <!-- Wiki curve line -->
+  <path d="M 80,298 C 130,296 200,289 280,274 C 360,258 430,234 510,203 C 590,170 660,142 740,116 C 780,103 800,97 820,93"
+        fill="none" stroke="url(#wikiCurve)" stroke-width="3"/>
+
+  <!-- Dots on wiki curve at key months -->
+  <g fill="#a855f7">
+    <circle cx="80" cy="298" r="5"/>
+    <circle cx="230" cy="274" r="5"/>
+    <circle cx="380" cy="252" r="5"/>
+    <circle cx="530" cy="210" r="5"/>
+    <circle cx="680" cy="136" r="5"/>
+    <circle cx="820" cy="93" r="5"/>
+  </g>
+
+  <!-- Annotations on wiki dots -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#c4b5fd">
+    <text x="240" y="265">~50 notes</text>
+    <text x="385" y="242">dense links</text>
+    <text x="535" y="200">AI finds</text>
+    <text x="535" y="213">patterns</text>
+    <text x="685" y="126">compounding</text>
+  </g>
+
+  <!-- Legend -->
+  <rect x="550" y="340" width="300" height="62" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+
+  <line x1="568" y1="360" x2="598" y2="360" stroke="#a855f7" stroke-width="3"/>
+  <circle cx="583" cy="360" r="4" fill="#a855f7"/>
+  <text x="608" y="364" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#c4b5fd">LLM Wiki (Obsidian + Git)</text>
+
+  <line x1="568" y1="385" x2="598" y2="385" stroke="#6b7280" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="608" y="389" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#9ca3af">Plain chat sessions</text>
+
+  <!-- Key insight box -->
+  <rect x="80" y="338" width="430" height="64" rx="8" fill="#3b0764" opacity="0.6" stroke="#6d28d9" stroke-width="1"/>
+  <text x="295" y="360" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#e9d5ff" font-weight="600">Chat: resets after every session</text>
+  <text x="295" y="380" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#e9d5ff" font-weight="600">LLM Wiki: each session builds on the last</text>
+  <text x="295" y="396" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#a855f7">The gap widens every month you use it</text>
+</svg>

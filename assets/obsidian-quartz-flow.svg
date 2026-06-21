@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <linearGradient id="bgF" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <marker id="arrF" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#484f58"/>
+    </marker>
+    <marker id="arrFBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#0891b2"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="500" fill="url(#bgF)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#0891b2" opacity="0.8"/>
+
+  <text x="600" y="52" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="22" font-weight="700" fill="#f0f6fc">처리 흐름: 노트 → 지식 자산</text>
+  <line x1="60" y1="68" x2="1140" y2="68" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- 단계 1: 노트 작성 -->
+  <rect x="40" y="95" width="185" height="260" rx="12" fill="#1a0d2e" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="40" y="95" width="185" height="44" rx="12" fill="#4c1d95" opacity="0.5"/>
+  <text x="133" y="123" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#a78bfa">① 노트 작성</text>
+  <text x="133" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="20" fill="#a78bfa">📝</text>
+  <text x="133" y="185" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" font-weight="600" fill="#c4b5fd">Obsidian</text>
+  <text x="56" y="212" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 마크다운 작성</text>
+  <text x="56" y="230" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• [[양방향 링크]]</text>
+  <text x="56" y="248" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 태그 · 메타데이터</text>
+  <text x="56" y="266" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 일일 노트</text>
+  <text x="56" y="284" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• Vault 로컬 저장</text>
+  <rect x="56" y="322" width="153" height="24" rx="8" fill="#2d1f4e"/>
+  <text x="133" y="339" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#a78bfa">로컬 .md 파일</text>
+
+  <!-- 화살표 1→2 -->
+  <line x1="226" y1="225" x2="256" y2="225" stroke="#484f58" stroke-width="2" marker-end="url(#arrF)"/>
+  <text x="241" y="218" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="10" fill="#6e7681">수정</text>
+
+  <!-- 단계 2: LLM 증강 -->
+  <rect x="257" y="95" width="185" height="260" rx="12" fill="#1c1200" stroke="#d97706" stroke-width="1.5"/>
+  <rect x="257" y="95" width="185" height="44" rx="12" fill="#92400e" opacity="0.5"/>
+  <text x="350" y="123" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#fbbf24">② LLM 증강</text>
+  <text x="350" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="20" fill="#fbbf24">🤖</text>
+  <text x="350" y="185" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" font-weight="600" fill="#fde68a">Claude Code</text>
+  <text x="273" y="212" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 노트 자동 요약</text>
+  <text x="273" y="230" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 태그 추천 · 정제</text>
+  <text x="273" y="248" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 연관 개념 연결</text>
+  <text x="273" y="266" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 빈 링크 채우기</text>
+  <text x="273" y="284" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 퍼블리시 최적화</text>
+  <rect x="273" y="322" width="153" height="24" rx="8" fill="#2d1f00"/>
+  <text x="350" y="339" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#fbbf24">증강된 .md 파일</text>
+
+  <!-- 화살표 2→3 -->
+  <line x1="443" y1="225" x2="473" y2="225" stroke="#484f58" stroke-width="2" marker-end="url(#arrF)"/>
+  <text x="458" y="218" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="10" fill="#6e7681">저장</text>
+
+  <!-- 단계 3: Git 커밋 -->
+  <rect x="474" y="95" width="185" height="260" rx="12" fill="#1a0505" stroke="#dc2626" stroke-width="1.5"/>
+  <rect x="474" y="95" width="185" height="44" rx="12" fill="#7f1d1d" opacity="0.5"/>
+  <text x="567" y="123" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#f87171">③ Git 커밋</text>
+  <text x="567" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="20" fill="#f87171">📦</text>
+  <text x="567" y="185" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" font-weight="600" fill="#fca5a5">Git + GitHub</text>
+  <text x="490" y="212" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• git add · commit</text>
+  <text x="490" y="230" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• git push origin</text>
+  <text x="490" y="248" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 변경 이력 보존</text>
+  <text x="490" y="266" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 원격 백업</text>
+  <text x="490" y="284" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• GitHub Actions 트리거</text>
+  <rect x="490" y="322" width="153" height="24" rx="8" fill="#2d0a0a"/>
+  <text x="567" y="339" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#f87171">원격 저장소 반영</text>
+
+  <!-- 화살표 3→4 -->
+  <line x1="660" y1="225" x2="690" y2="225" stroke="#0891b2" stroke-width="2" marker-end="url(#arrFBlue)"/>
+  <text x="675" y="218" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="10" fill="#0891b2">빌드</text>
+
+  <!-- 단계 4: Quartz 빌드 -->
+  <rect x="691" y="95" width="185" height="260" rx="12" fill="#021a1f" stroke="#0891b2" stroke-width="2"/>
+  <rect x="691" y="95" width="185" height="44" rx="12" fill="#0891b2" opacity="0.4"/>
+  <text x="784" y="123" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#22d3ee">④ Quartz 빌드</text>
+  <text x="784" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="20" fill="#22d3ee">⚙️</text>
+  <text x="784" y="185" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" font-weight="600" fill="#67e8f9">Quartz v4</text>
+  <text x="707" y="212" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• npx quartz build</text>
+  <text x="707" y="230" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• MD → HTML 변환</text>
+  <text x="707" y="248" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 그래프 생성</text>
+  <text x="707" y="266" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 검색 인덱스</text>
+  <text x="707" y="284" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#8b949e">• 정적 파일 생성</text>
+  <rect x="707" y="322" width="153" height="24" rx="8" fill="#021a1f"/>
+  <text x="784" y="339" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#22d3ee">public/ 정적 파일</text>
+
+  <!-- 화살표 4→5 -->
+  <line x1="877" y1="225" x2="907" y2="225" stroke="#0891b2" stroke-width="2" marker-end="url(#arrFBlue)"/>
+  <text x="892" y="218" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="10" fill="#0891b2">배포</text>
+
+  <!-- 단계 5: 웹 공개 -->
+  <rect x="908" y="95" width="252" height="260" rx="12" fill="#021a1f" stroke="#0891b2" stroke-width="2"/>
+  <rect x="908" y="95" width="252" height="44" rx="12" fill="#0891b2" opacity="0.5"/>
+  <text x="1034" y="123" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#22d3ee">⑤ 웹 공개</text>
+  <text x="1034" y="158" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="20" fill="#22d3ee">🌐</text>
+  <text x="1034" y="185" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" font-weight="600" fill="#67e8f9">GitHub Pages / Cloudflare</text>
+  <text x="924" y="212" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#a5f3fc">• 공개 지식 기반 운영</text>
+  <text x="924" y="230" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#a5f3fc">• 노트 그래프 탐색</text>
+  <text x="924" y="248" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#a5f3fc">• 전문 지식 검색</text>
+  <text x="924" y="266" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#a5f3fc">• SEO · 외부 공유</text>
+  <text x="924" y="284" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#a5f3fc">• 복리 효과 누적</text>
+  <rect x="924" y="322" width="220" height="24" rx="8" fill="#021a1f"/>
+  <text x="1034" y="339" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="11" fill="#22d3ee">공개 지식 자산 완성</text>
+
+  <!-- 하단 -->
+  <line x1="60" y1="410" x2="1140" y2="410" stroke="#21262d" stroke-width="1"/>
+  <text x="600" y="440" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="13" fill="#6e7681">작성 → 증강 → 버전관리 → 빌드 → 공개 · 반복될수록 지식이 복리로 쌓입니다</text>
+  <text x="600" y="468" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#30363d">Allen · privatelabs.io</text>
+</svg>

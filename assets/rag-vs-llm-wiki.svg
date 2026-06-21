@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="ragGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#164e63"/>
+      <stop offset="100%" style="stop-color:#0e7490"/>
+    </linearGradient>
+    <linearGradient id="wikiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b0764"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="460" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="500" y="45" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="700" fill="#f1f5f9">RAG vs LLM Wiki</text>
+  <text x="500" y="68" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#64748b">Two different approaches to the LLM memory problem</text>
+
+  <!-- Divider -->
+  <line x1="500" y1="85" x2="500" y2="430" stroke="#334155" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+  <!-- ── RAG Side ── -->
+  <text x="250" y="108" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="700" fill="#38bdf8">RAG</text>
+  <text x="250" y="128" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#7dd3fc">Retrieval-Augmented Generation</text>
+
+  <!-- RAG diagram -->
+  <rect x="30" y="145" width="440" height="220" rx="10" fill="url(#ragGrad)" opacity="0.3" stroke="#0891b2" stroke-width="1"/>
+
+  <!-- RAG flow -->
+  <rect x="55" y="165" width="100" height="50" rx="8" fill="#0e7490" opacity="0.8"/>
+  <text x="105" y="185" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e0f2fe">User</text>
+  <text x="105" y="200" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e0f2fe">Query</text>
+  <text x="105" y="215" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">🔍</text>
+
+  <line x1="160" y1="190" x2="195" y2="190" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+  <rect x="200" y="165" width="100" height="50" rx="8" fill="#0e7490" opacity="0.8"/>
+  <text x="250" y="185" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e0f2fe">Vector</text>
+  <text x="250" y="200" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e0f2fe">Search</text>
+  <text x="250" y="215" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">📦</text>
+
+  <line x1="305" y1="190" x2="340" y2="190" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+  <rect x="345" y="165" width="100" height="50" rx="8" fill="#0e7490" opacity="0.8"/>
+  <text x="395" y="185" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e0f2fe">LLM</text>
+  <text x="395" y="200" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e0f2fe">Answer</text>
+  <text x="395" y="215" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="20">💬</text>
+
+  <!-- RAG characteristics -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="13">
+    <text x="55" y="252" fill="#7dd3fc">✓  Instant retrieval from large corpora</text>
+    <text x="55" y="276" fill="#7dd3fc">✓  Works with static documents</text>
+    <text x="55" y="300" fill="#7dd3fc">✓  Low maintenance overhead</text>
+    <text x="55" y="324" fill="#ef4444">✗  Knowledge doesn't evolve</text>
+    <text x="55" y="348" fill="#ef4444">✗  No connections between ideas</text>
+  </g>
+
+  <!-- RAG label -->
+  <rect x="55" y="378" width="390" height="32" rx="8" fill="#0e7490" opacity="0.4"/>
+  <text x="250" y="399" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#38bdf8" font-weight="600">Best for: "Find the answer in these docs"</text>
+
+  <!-- Arrow markers for RAG -->
+  <defs>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+  </defs>
+
+  <!-- ── LLM Wiki Side ── -->
+  <text x="750" y="108" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="700" fill="#a78bfa">LLM Wiki</text>
+  <text x="750" y="128" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#c4b5fd">Persistent Compiled Knowledge</text>
+
+  <!-- Wiki diagram -->
+  <rect x="530" y="145" width="440" height="220" rx="10" fill="url(#wikiGrad)" opacity="0.3" stroke="#7c3aed" stroke-width="1"/>
+
+  <!-- Wiki flow - graph nodes -->
+  <!-- Center node -->
+  <circle cx="750" cy="205" r="32" fill="#6d28d9" opacity="0.9"/>
+  <text x="750" y="200" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#ede9fe">Concept</text>
+  <text x="750" y="215" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#ede9fe">A</text>
+
+  <!-- Linked nodes -->
+  <circle cx="660" cy="165" r="22" fill="#5b21b6" opacity="0.9"/>
+  <text x="660" y="169" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#ddd6fe">B</text>
+
+  <circle cx="840" cy="165" r="22" fill="#5b21b6" opacity="0.9"/>
+  <text x="840" y="169" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#ddd6fe">C</text>
+
+  <circle cx="680" cy="240" r="22" fill="#5b21b6" opacity="0.9"/>
+  <text x="680" y="244" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#ddd6fe">D</text>
+
+  <circle cx="820" cy="240" r="22" fill="#5b21b6" opacity="0.9"/>
+  <text x="820" y="244" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#ddd6fe">E</text>
+
+  <!-- Links -->
+  <line x1="718" y1="183" x2="678" y2="173" stroke="#a78bfa" stroke-width="1.5"/>
+  <line x1="782" y1="183" x2="822" y2="173" stroke="#a78bfa" stroke-width="1.5"/>
+  <line x1="723" y1="222" x2="698" y2="235" stroke="#a78bfa" stroke-width="1.5"/>
+  <line x1="777" y1="222" x2="802" y2="235" stroke="#a78bfa" stroke-width="1.5"/>
+  <line x1="660" y1="187" x2="680" y2="218" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="840" y1="187" x2="820" y2="218" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Wiki characteristics -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="13">
+    <text x="545" y="276" fill="#c4b5fd">✓  Knowledge evolves and deepens</text>
+    <text x="545" y="300" fill="#c4b5fd">✓  Explicit concept connections</text>
+    <text x="545" y="324" fill="#c4b5fd">✓  AI actively curates and links</text>
+    <text x="545" y="348" fill="#fca5a5">✗  Requires ongoing curation habit</text>
+  </g>
+
+  <!-- Wiki label -->
+  <rect x="545" y="378" width="410" height="32" rx="8" fill="#6d28d9" opacity="0.4"/>
+  <text x="750" y="399" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#a78bfa" font-weight="600">Best for: "Build understanding over months"</text>
+
+  <!-- VS badge -->
+  <circle cx="500" cy="265" r="28" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="500" y="271" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="900" fill="#94a3b8">vs</text>
+
+  <!-- Bottom note -->
+  <text x="500" y="445" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#475569">RAG = search engine  |  LLM Wiki = knowledge base that grows</text>
+</svg>

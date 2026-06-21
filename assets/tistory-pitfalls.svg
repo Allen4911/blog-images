@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540">
+  <!-- Background -->
+  <rect width="1200" height="540" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#FF9500"/>
+
+  <!-- Title -->
+  <text x="600" y="52" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="26" font-weight="700" fill="#1D1D1F">핵심 함정 3종 — 실제로 막힌 지점들</text>
+  <text x="600" y="80" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" fill="#6E6E73">증상 &#8594; 원인 &#8594; 해결 — 각각 원인을 모르면 그냥 안 된다로 끝날 수 있었다</text>
+
+  <line x1="60" y1="100" x2="1140" y2="100" stroke="#E5E5EA" stroke-width="1"/>
+
+  <!-- CARD 1: 제목 추출 오류 -->
+  <rect x="40" y="116" width="354" height="390" rx="14" fill="#FFFBF2" stroke="#FF9500" stroke-width="1.5"/>
+  <!-- Warning header -->
+  <rect x="40" y="116" width="354" height="52" rx="14" fill="#FF9500" opacity="0.12"/>
+  <!-- Warning icon (triangle) -->
+  <polygon points="68,148 80,126 92,148" fill="#FF9500" opacity="0.8"/>
+  <text x="80" y="146" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="108" y="138" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="15" font-weight="700" fill="#B35800">함정 1. 제목 추출 오류</text>
+  <text x="108" y="157" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#B35800">코드블록 안 bash 주석이 제목으로 잡힘</text>
+
+  <!-- Symptom section -->
+  <rect x="56" y="178" width="322" height="70" rx="10" fill="#FFFFFF" stroke="#FFE0B2" stroke-width="1"/>
+  <text x="72" y="198" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FF9500">증상</text>
+  <text x="72" y="216" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">추출된 제목 = "일반적인 작업 세션 마무리"</text>
+  <text x="72" y="234" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">실제 글 제목은 ## Obsidian+LLM+Git...</text>
+
+  <!-- Cause section -->
+  <rect x="56" y="258" width="322" height="90" rx="10" fill="#FFFFFF" stroke="#FFE0B2" stroke-width="1"/>
+  <text x="72" y="278" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FF9500">원인 (2가지 버그 겹침)</text>
+  <text x="72" y="298" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">① 코드블록 내부를 걸러내지 않음</text>
+  <text x="83" y="315" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">bash 블록 안 # 주석이 H1으로 매칭</text>
+  <text x="72" y="335" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">② /^#\s+/ — H1만 봄 (실제 글은 H2)</text>
+
+  <!-- Fix section -->
+  <rect x="56" y="358" width="322" height="100" rx="10" fill="#FFFFFF" stroke="#D0E8FF" stroke-width="1"/>
+  <text x="72" y="378" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#007AFF">해결</text>
+  <text x="72" y="396" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">코드블록 먼저 제거 후 헤딩 매칭</text>
+  <rect x="66" y="405" width="306" height="42" rx="6" fill="#F5F8FF"/>
+  <text x="219" y="421" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9.5" fill="#6E6E73">body.replace(/```[\s\S]*?```/g, '')</text>
+  <text x="219" y="439" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9.5" fill="#007AFF">noFences.match(/^#{1,6}\s+(.+)$/m)</text>
+
+  <rect x="72" y="466" width="150" height="24" rx="8" fill="#EBF3FF"/>
+  <text x="147" y="482" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#007AFF">H1~H6 모두 매칭</text>
+
+  <!-- CARD 2: 이미지 절대 URL -->
+  <rect x="423" y="116" width="354" height="390" rx="14" fill="#FFF5F5" stroke="#FF3B30" stroke-width="1.5"/>
+  <rect x="423" y="116" width="354" height="52" rx="14" fill="#FF3B30" opacity="0.1"/>
+  <polygon points="451,148 463,126 475,148" fill="#FF3B30" opacity="0.8"/>
+  <text x="463" y="146" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="491" y="138" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="15" font-weight="700" fill="#CC0000">함정 2. 이미지 절대 URL</text>
+  <text x="491" y="157" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#CC0000">상대경로는 티스토리 서버에 없다</text>
+
+  <!-- Symptom section -->
+  <rect x="439" y="178" width="322" height="70" rx="10" fill="#FFFFFF" stroke="#FFD0D0" stroke-width="1"/>
+  <text x="455" y="198" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FF3B30">증상</text>
+  <text x="455" y="216" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">에디터 주입 후 이미지 전부 깨짐</text>
+  <text x="455" y="234" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">로컬에서는 보였으나 티스토리에서는 X</text>
+
+  <!-- Cause section -->
+  <rect x="439" y="258" width="322" height="90" rx="10" fill="#FFFFFF" stroke="#FFD0D0" stroke-width="1"/>
+  <text x="455" y="278" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FF3B30">원인</text>
+  <text x="455" y="298" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">assets/파일명.png — 상대경로 사용</text>
+  <rect x="449" y="307" width="306" height="30" rx="6" fill="#FFF0F0"/>
+  <text x="602" y="319" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#CC0000">tistory.com/assets/... (없는 경로)</text>
+  <text x="602" y="337" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">서버에 파일이 없으니 당연히 안 보임</text>
+
+  <!-- Fix section -->
+  <rect x="439" y="358" width="322" height="100" rx="10" fill="#FFFFFF" stroke="#D0E8FF" stroke-width="1"/>
+  <text x="455" y="378" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#007AFF">해결</text>
+  <text x="455" y="396" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">GitHub public raw 절대 URL 사용</text>
+  <rect x="449" y="405" width="306" height="42" rx="6" fill="#F5F8FF"/>
+  <text x="602" y="421" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="8.5" fill="#6E6E73">raw.githubusercontent.com/</text>
+  <text x="602" y="439" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="8.5" fill="#007AFF">Allen4911/blog-images/main/assets/...</text>
+
+  <text x="455" y="468" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">저장소는 반드시 public — private은 인증 필요</text>
+
+  <!-- CARD 3: 제목 revert -->
+  <rect x="806" y="116" width="354" height="390" rx="14" fill="#FFF5F5" stroke="#FF3B30" stroke-width="1.5"/>
+  <rect x="806" y="116" width="354" height="52" rx="14" fill="#FF3B30" opacity="0.1"/>
+  <polygon points="834,148 846,126 858,148" fill="#FF3B30" opacity="0.8"/>
+  <text x="846" y="146" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="874" y="138" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="15" font-weight="700" fill="#CC0000">함정 3. 제목 revert</text>
+  <text x="874" y="157" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#CC0000">.value= 하면 React가 되돌린다</text>
+
+  <!-- Symptom section -->
+  <rect x="822" y="178" width="322" height="70" rx="10" fill="#FFFFFF" stroke="#FFD0D0" stroke-width="1"/>
+  <text x="838" y="198" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FF3B30">증상</text>
+  <text x="838" y="216" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">스크린샷에는 제목 있음 → 창 확인하면 비어 있음</text>
+  <text x="838" y="234" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">시간 지나면 React가 state로 덮어씀</text>
+
+  <!-- Cause section -->
+  <rect x="822" y="258" width="322" height="90" rx="10" fill="#FFFFFF" stroke="#FFD0D0" stroke-width="1"/>
+  <text x="838" y="278" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#FF3B30">원인</text>
+  <text x="838" y="298" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">티스토리 신에디터 = React controlled input</text>
+  <text x="838" y="316" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#6E6E73">.value= 는 DOM만 바꿈 — React state 무시</text>
+  <text x="838" y="340" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#AEAEB2">다음 렌더 사이클에서 state 값으로 복구</text>
+
+  <!-- Fix section -->
+  <rect x="822" y="358" width="322" height="100" rx="10" fill="#FFFFFF" stroke="#D0E8FF" stroke-width="1"/>
+  <text x="838" y="378" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" font-weight="700" fill="#007AFF">해결</text>
+  <text x="838" y="396" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">native setter + 이벤트 dispatch</text>
+  <rect x="832" y="405" width="306" height="42" rx="6" fill="#F5F8FF"/>
+  <text x="985" y="420" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="8.5" fill="#6E6E73">Object.getOwnPropertyDescriptor(</text>
+  <text x="985" y="436" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="8.5" fill="#007AFF">HTMLTextAreaElement.prototype, 'value')</text>
+
+  <text x="838" y="466" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">input + change 이벤트 — React가 state 변경으로 인식</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="518" x2="1160" y2="518" stroke="#E5E5EA" stroke-width="1"/>
+  <text x="600" y="532" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#AEAEB2">실측으로만 잡힌 함정들 — Allen · privatelabs.io</text>
+</svg>

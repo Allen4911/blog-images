@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="1100" height="520">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="520" fill="url(#bg3)" rx="16"/>
+  <rect width="1100" height="520" fill="none" stroke="#1e293b" stroke-width="2" rx="16"/>
+
+  <text x="550" y="44" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">Marp 기본 테마 비교</text>
+  <text x="550" y="67" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#64748b">front-matter의 <tspan font-family="'Courier New', monospace" fill="#67e8f9">theme:</tspan> 한 줄만 바꾸면 분위기가 달라집니다.</text>
+
+  <!-- ===== default ===== -->
+  <text x="190" y="108" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="700" fill="#67e8f9">theme: default</text>
+  <rect x="50" y="124" width="280" height="172" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+  <rect x="50" y="124" width="6" height="172" rx="3" fill="#0288d1"/>
+  <text x="74" y="166" font-family="'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="700" fill="#1a1a1a">제목</text>
+  <line x1="74" y1="178" x2="180" y2="178" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="74" y="208" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#444">• 본문 텍스트</text>
+  <text x="74" y="230" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#444">• 좌측 정렬</text>
+  <text x="74" y="252" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#444">• 깔끔한 흰 배경</text>
+  <text x="306" y="286" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#94a3b8">1</text>
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#cbd5e1">
+    <text x="50" y="332" font-weight="700" fill="#f1f5f9">기본 · 범용</text>
+    <text x="50" y="358">✔ 흰 배경, 좌측 정렬</text>
+    <text x="50" y="380">✔ 문서·강의 자료에 무난</text>
+    <text x="50" y="402">✔ 고민될 땐 이것부터</text>
+  </g>
+
+  <!-- ===== gaia ===== -->
+  <text x="550" y="108" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="700" fill="#fbbf24">theme: gaia</text>
+  <rect x="410" y="124" width="280" height="172" rx="8" fill="#fef6e4" stroke="#334155" stroke-width="1.5"/>
+  <text x="550" y="172" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#2b2016">제목</text>
+  <line x1="500" y1="186" x2="600" y2="186" stroke="#c2925b" stroke-width="2"/>
+  <text x="434" y="216" font-family="Georgia, serif" font-size="12" fill="#5b4a36">• 따뜻한 베이지 톤</text>
+  <text x="434" y="238" font-family="Georgia, serif" font-size="12" fill="#5b4a36">• 세련된 느낌</text>
+  <text x="434" y="260" font-family="Georgia, serif" font-size="12" fill="#5b4a36">• 발표용에 적합</text>
+  <text x="666" y="286" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#a8a29e">1</text>
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#cbd5e1">
+    <text x="410" y="332" font-weight="700" fill="#f1f5f9">gaia · 세련</text>
+    <text x="410" y="358">✔ 따뜻한 크림 배경</text>
+    <text x="410" y="380">✔ 발표·키노트 분위기</text>
+    <text x="410" y="402">✔ <tspan font-family="'Courier New', monospace" fill="#fbbf24">_class: lead</tspan> 표지 지원</text>
+  </g>
+
+  <!-- ===== uncover ===== -->
+  <text x="910" y="108" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" font-weight="700" fill="#c4b5fd">theme: uncover</text>
+  <rect x="770" y="124" width="280" height="172" rx="8" fill="#fafafa" stroke="#334155" stroke-width="1.5"/>
+  <text x="910" y="180" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#18181b">제목</text>
+  <text x="910" y="212" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#52525b">가운데 정렬</text>
+  <text x="910" y="234" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#52525b">미니멀 여백</text>
+  <text x="1026" y="286" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#a1a1aa">1</text>
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#cbd5e1">
+    <text x="770" y="332" font-weight="700" fill="#f1f5f9">uncover · 미니멀</text>
+    <text x="770" y="358">✔ 중앙 정렬, 큰 여백</text>
+    <text x="770" y="380">✔ 키노트풍 심플함</text>
+    <text x="770" y="402">✔ 메시지 집중형 발표</text>
+  </g>
+
+  <!-- bottom note -->
+  <rect x="50" y="438" width="1000" height="44" rx="8" fill="#0b1220" stroke="#334155" stroke-width="1"/>
+  <text x="70" y="466" font-family="'Courier New', monospace" font-size="13" fill="#67e8f9">theme: default<tspan fill="#475569">  |  </tspan><tspan fill="#fbbf24">theme: gaia</tspan><tspan fill="#475569">  |  </tspan><tspan fill="#c4b5fd">theme: uncover</tspan><tspan fill="#64748b" font-family="'Segoe UI', system-ui, sans-serif">    ← front-matter 한 줄로 전체 슬라이드 테마가 바뀝니다</tspan></text>
+</svg>

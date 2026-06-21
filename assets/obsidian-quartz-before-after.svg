@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580">
+  <defs>
+    <linearGradient id="bgBA" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <marker id="arrBA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#484f58"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="580" fill="url(#bgBA)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#0891b2" opacity="0.8"/>
+
+  <text x="600" y="48" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="22" font-weight="700" fill="#f0f6fc">도입 전 vs 도입 후: 지식이 자산이 되는 시점</text>
+  <line x1="60" y1="64" x2="1140" y2="64" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- 중앙 구분선 -->
+  <line x1="600" y1="72" x2="600" y2="530" stroke="#21262d" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+  <!-- 왼쪽: 도입 전 -->
+  <rect x="60" y="80" width="500" height="50" rx="10" fill="#3b0000" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="310" y="111" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="17" font-weight="700" fill="#f87171">❌ 도입 전 — 고립된 노트</text>
+
+  <!-- 오른쪽: 도입 후 -->
+  <rect x="640" y="80" width="500" height="50" rx="10" fill="#021a1f" stroke="#0891b2" stroke-width="2"/>
+  <text x="890" y="111" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="17" font-weight="700" fill="#22d3ee">✅ 도입 후 — 연결된 공개 지식 기반</text>
+
+  <!-- 왼쪽 항목들 -->
+  <!-- 항목 1 -->
+  <rect x="75" y="150" width="470" height="64" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="100" y="176" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#f87171">📂 고립된 로컬 파일</text>
+  <text x="100" y="200" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">폴더 안에 묻힌 .md 파일들 — 다시 찾기 어려움</text>
+
+  <!-- 항목 2 -->
+  <rect x="75" y="226" width="470" height="64" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="100" y="252" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#f87171">🔍 검색 불가 · 연결 없음</text>
+  <text x="100" y="276" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">노트 간 연결 없이 각각 고립 — 지식이 파편화됨</text>
+
+  <!-- 항목 3 -->
+  <rect x="75" y="302" width="470" height="64" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="100" y="328" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#f87171">🙅 공유 불가</text>
+  <text x="100" y="352" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">나만 볼 수 있는 노트 — 가치가 내부에서 소멸</text>
+
+  <!-- 항목 4 -->
+  <rect x="75" y="378" width="470" height="64" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="100" y="404" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#f87171">🤖 LLM 컨텍스트 빈약</text>
+  <text x="100" y="428" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">질문할 때마다 맥락을 처음부터 설명해야 함</text>
+
+  <!-- 항목 5 (왼쪽) -->
+  <rect x="75" y="454" width="470" height="54" rx="10" fill="#3b0000" stroke="#dc2626" stroke-width="1" opacity="0.6"/>
+  <text x="310" y="476" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="13" fill="#fca5a5">결과: 쌓일수록 무거워지고, 찾을수록 지침</text>
+  <text x="310" y="496" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#6e7681">지식이 자산이 아닌 부채가 됨</text>
+
+  <!-- 오른쪽 항목들 -->
+  <!-- 항목 1 -->
+  <rect x="630" y="150" width="510" height="64" rx="10" fill="#021a1f" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="655" y="176" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#22d3ee">🌐 공개 지식 기반으로 전환</text>
+  <text x="655" y="200" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">Quartz → 웹사이트 자동 생성 · 노트 그래프 탐색 가능</text>
+
+  <!-- 항목 2 -->
+  <rect x="630" y="226" width="510" height="64" rx="10" fill="#021a1f" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="655" y="252" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#22d3ee">🔗 노트 간 연결 · 전문 검색</text>
+  <text x="655" y="276" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">[[링크]] 그래프 시각화 · 전문 검색 · SEO 자동 반영</text>
+
+  <!-- 항목 3 -->
+  <rect x="630" y="302" width="510" height="64" rx="10" fill="#021a1f" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="655" y="328" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#22d3ee">📤 공유 · 신뢰 · 협업 가능</text>
+  <text x="655" y="352" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">URL 하나로 공유 — 전문성이 밖으로 드러남</text>
+
+  <!-- 항목 4 -->
+  <rect x="630" y="378" width="510" height="64" rx="10" fill="#021a1f" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="655" y="404" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" font-weight="700" fill="#22d3ee">🤖 LLM 컨텍스트 복리 누적</text>
+  <text x="655" y="428" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#8b949e">Vault가 쌓일수록 Claude가 내 맥락으로 정확히 답변</text>
+
+  <!-- 항목 5 (오른쪽) -->
+  <rect x="630" y="454" width="510" height="54" rx="10" fill="#021a1f" stroke="#0891b2" stroke-width="2"/>
+  <text x="885" y="476" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="13" font-weight="700" fill="#22d3ee">결과: 쌓일수록 강해지는 복리 효과</text>
+  <text x="885" y="496" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#67e8f9">지식이 공개 자산 · 전문성의 증거가 됨</text>
+
+  <!-- 하단 요약 -->
+  <line x1="60" y1="524" x2="1140" y2="524" stroke="#21262d" stroke-width="1"/>
+  <text x="600" y="552" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="14" fill="#6e7681">Obsidian + LLM + Git + Quartz — 6개월 운영이면 세 가지가 동시에 복리로 증가합니다</text>
+  <text x="600" y="572" text-anchor="middle"
+        font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic',sans-serif"
+        font-size="12" fill="#30363d">Allen · privatelabs.io</text>
+</svg>

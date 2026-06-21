@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <marker id="arrRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#FF3B30"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#34C759"/>
+    </marker>
+    <marker id="arrBlue2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#007AFF"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="#FFFFFF"/>
+  <!-- Top bar: red left / green right -->
+  <rect x="0" y="0" width="600" height="4" fill="#FF3B30"/>
+  <rect x="600" y="0" width="600" height="4" fill="#34C759"/>
+
+  <!-- Title -->
+  <text x="600" y="55" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="28" font-weight="700" fill="#1D1D1F">Tistory API 폐쇄 &#8594; Playwright DOM 우회</text>
+  <text x="600" y="85" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="14" fill="#6E6E73">막힌 공식 API &#183; 열린 브라우저 인터페이스</text>
+
+  <line x1="60" y1="105" x2="1140" y2="105" stroke="#E5E5EA" stroke-width="1"/>
+
+  <!-- LEFT: API CLOSED card -->
+  <rect x="60" y="122" width="430" height="272" rx="14" fill="#FFF5F5" stroke="#FF3B30" stroke-width="2"/>
+  <rect x="60" y="122" width="430" height="56" rx="14" fill="#FF3B30" opacity="0.1"/>
+
+  <!-- Big X symbol -->
+  <circle cx="275" cy="150" r="18" fill="#FF3B30" opacity="0.15"/>
+  <line x1="264" y1="139" x2="286" y2="161" stroke="#FF3B30" stroke-width="3" stroke-linecap="round"/>
+  <line x1="286" y1="139" x2="264" y2="161" stroke="#FF3B30" stroke-width="3" stroke-linecap="round"/>
+  <text x="305" y="157" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="16" font-weight="700" fill="#CC0000">Tistory Open API</text>
+
+  <!-- API closed details -->
+  <rect x="80" y="190" width="390" height="60" rx="10" fill="#FFFFFF" stroke="#FFD0D0" stroke-width="1"/>
+  <text x="275" y="212" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#CC0000">2024년 2월 완전 폐쇄</text>
+  <text x="275" y="232" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#6E6E73">신규 App Key 발급 중단 · 기존 API 응답 없음</text>
+
+  <!-- API capabilities list (crossed out) -->
+  <rect x="80" y="263" width="390" height="118" rx="10" fill="#FFFFFF" stroke="#F0D0D0" stroke-width="1"/>
+  <text x="100" y="286" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#AEAEB2">글 작성 API (POST /post/write)</text>
+  <line x1="100" y1="284" x2="420" y2="284" stroke="#FF3B30" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="308" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#AEAEB2">이미지 업로드 API (POST /post/attach)</text>
+  <line x1="100" y1="306" x2="450" y2="306" stroke="#FF3B30" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="330" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#AEAEB2">카테고리 조회 API (GET /category/list)</text>
+  <line x1="100" y1="328" x2="440" y2="328" stroke="#FF3B30" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="354" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#AEAEB2">OAuth 2.0 인증 전부 사용 불가</text>
+  <line x1="100" y1="352" x2="390" y2="352" stroke="#FF3B30" stroke-width="1" opacity="0.6"/>
+
+  <!-- Middle: blocked arrow + detour -->
+  <!-- Blocked straight path -->
+  <line x1="492" y1="225" x2="565" y2="225" stroke="#FF3B30" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrRed)"/>
+  <!-- Block wall -->
+  <rect x="560" y="205" width="12" height="42" rx="3" fill="#FF3B30" opacity="0.7"/>
+  <text x="566" y="255" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#FF3B30">차단</text>
+
+  <!-- Detour arrow (curved path down and around) -->
+  <!-- Down from left -->
+  <line x1="530" y1="258" x2="530" y2="320" stroke="#007AFF" stroke-width="2.5"/>
+  <!-- Across bottom -->
+  <line x1="530" y1="320" x2="670" y2="320" stroke="#007AFF" stroke-width="2.5"/>
+  <!-- Up to right -->
+  <line x1="670" y1="320" x2="670" y2="258" stroke="#007AFF" stroke-width="2.5" marker-end="url(#arrBlue2)"/>
+  <!-- Label -->
+  <rect x="565" y="308" width="70" height="22" rx="8" fill="#EBF3FF"/>
+  <text x="600" y="323" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#007AFF">우회 경로</text>
+
+  <!-- RIGHT: Playwright DOM automation card -->
+  <rect x="710" y="122" width="430" height="272" rx="14" fill="#F5FFF7" stroke="#34C759" stroke-width="2"/>
+  <rect x="710" y="122" width="430" height="56" rx="14" fill="#34C759" opacity="0.1"/>
+
+  <!-- Check mark symbol -->
+  <circle cx="740" cy="150" r="18" fill="#34C759" opacity="0.2"/>
+  <polyline points="730,150 738,158 755,142" fill="none" stroke="#34C759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="770" y="157" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="16" font-weight="700" fill="#1A7A35">Playwright DOM 자동화</text>
+
+  <!-- How it works -->
+  <rect x="730" y="190" width="390" height="60" rx="10" fill="#FFFFFF" stroke="#D0FFD8" stroke-width="1"/>
+  <text x="925" y="212" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#1A7A35">로그인 세션 기반 브라우저 직접 조작</text>
+  <text x="925" y="232" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#6E6E73">공개 에디터 인터페이스 + 쿠키 세션 + JavaScript DOM</text>
+
+  <!-- Capabilities list -->
+  <rect x="730" y="263" width="390" height="118" rx="10" fill="#FFFFFF" stroke="#D0F0D8" stroke-width="1"/>
+  <text x="750" y="286" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#1D1D1F">제목 주입 (native setter + React 이벤트)</text>
+  <circle cx="743" cy="282" r="4" fill="#34C759"/>
+  <text x="750" y="308" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#1D1D1F">본문 주입 (tinymce.setContent)</text>
+  <circle cx="743" cy="304" r="4" fill="#34C759"/>
+  <text x="750" y="330" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#1D1D1F">카테고리 선택 (#category-btn 클릭)</text>
+  <circle cx="743" cy="326" r="4" fill="#34C759"/>
+  <text x="750" y="352" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#1D1D1F">태그 입력 (input#tagText + Enter)</text>
+  <circle cx="743" cy="348" r="4" fill="#34C759"/>
+
+  <!-- Footer -->
+  <line x1="60" y1="408" x2="1140" y2="408" stroke="#E5E5EA" stroke-width="1"/>
+  <text x="600" y="436" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" fill="#6E6E73">공식 API 없어도 브라우저가 열려 있으면 자동화는 가능하다</text>
+  <text x="600" y="462" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#AEAEB2">Allen · privatelabs.io</text>
+</svg>

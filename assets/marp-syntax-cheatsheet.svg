@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 580" width="1100" height="580">
+  <defs>
+    <linearGradient id="bgc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="hMd" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#0e7490"/><stop offset="100%" style="stop-color:#0891b2"/></linearGradient>
+    <linearGradient id="hAm" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#b45309"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient>
+    <linearGradient id="hPu" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#5b21b6"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient>
+    <linearGradient id="hGr" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#15803d"/><stop offset="100%" style="stop-color:#16a34a"/></linearGradient>
+  </defs>
+
+  <rect width="1100" height="580" fill="url(#bgc)" rx="16"/>
+  <rect width="1100" height="580" fill="none" stroke="#1e293b" stroke-width="2" rx="16"/>
+
+  <text x="550" y="46" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="700" fill="#f1f5f9">Marp 문법 치트시트</text>
+  <text x="550" y="70" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#64748b">자주 쓰는 문법 한눈에 — 설정 · 슬라이드 구분 · 디렉티브 · 이미지</text>
+
+  <!-- Panel 1: Front-matter (global) -->
+  <rect x="40" y="96" width="500" height="216" rx="12" fill="#0b1220" stroke="#0891b2" stroke-width="1.5"/>
+  <path d="M52,96 h476 a12,12 0 0 1 12,12 v30 h-500 v-30 a12,12 0 0 1 12,-12 z" fill="url(#hMd)"/>
+  <text x="60" y="123" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff">① 전역 설정 (front-matter)</text>
+  <g font-family="'Courier New', monospace" font-size="14">
+    <text x="60" y="160" fill="#f59e0b" font-weight="700">---</text>
+    <text x="60" y="182" fill="#a5f3fc">marp: <tspan fill="#86efac">true</tspan></text>
+    <text x="330" y="182" fill="#64748b" font-size="11">Marp 켜기 (필수)</text>
+    <text x="60" y="204" fill="#a5f3fc">theme: <tspan fill="#fde68a">default</tspan></text>
+    <text x="330" y="204" fill="#64748b" font-size="11">테마 선택</text>
+    <text x="60" y="226" fill="#a5f3fc">paginate: <tspan fill="#86efac">true</tspan></text>
+    <text x="330" y="226" fill="#64748b" font-size="11">페이지 번호 표시</text>
+    <text x="60" y="248" fill="#a5f3fc">size: <tspan fill="#fde68a">16:9</tspan></text>
+    <text x="330" y="248" fill="#64748b" font-size="11">화면 비율</text>
+    <text x="60" y="270" fill="#a5f3fc">header: <tspan fill="#fde68a">'My Talk'</tspan></text>
+    <text x="330" y="270" fill="#64748b" font-size="11">상단 머리글</text>
+    <text x="60" y="292" fill="#f59e0b" font-weight="700">---</text>
+    <text x="330" y="292" fill="#fbbf24" font-size="11">← 설정 블록 닫기</text>
+  </g>
+
+  <!-- Panel 2: slide separator -->
+  <rect x="560" y="96" width="500" height="216" rx="12" fill="#0b1220" stroke="#d97706" stroke-width="1.5"/>
+  <path d="M572,96 h476 a12,12 0 0 1 12,12 v30 h-500 v-30 a12,12 0 0 1 12,-12 z" fill="url(#hAm)"/>
+  <text x="580" y="123" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff">② 슬라이드 나누기</text>
+  <g font-family="'Courier New', monospace" font-size="14">
+    <text x="580" y="162" fill="#e2e8f0"># 첫 슬라이드</text>
+    <text x="580" y="184" fill="#94a3b8">내용...</text>
+    <text x="580" y="212" fill="#f59e0b" font-weight="700">---</text>
+    <text x="640" y="212" fill="#fbbf24" font-size="12">← 여기서 페이지가 나뉨</text>
+    <text x="580" y="240" fill="#e2e8f0"># 다음 슬라이드</text>
+    <text x="580" y="262" fill="#94a3b8">- 글머리 기호</text>
+    <text x="580" y="284" fill="#94a3b8">- 표·코드·이미지 자유롭게</text>
+  </g>
+
+  <!-- Panel 3: local directives -->
+  <rect x="40" y="328" width="500" height="216" rx="12" fill="#0b1220" stroke="#7c3aed" stroke-width="1.5"/>
+  <path d="M52,328 h476 a12,12 0 0 1 12,12 v30 h-500 v-30 a12,12 0 0 1 12,-12 z" fill="url(#hPu)"/>
+  <text x="60" y="355" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff">③ 로컬 디렉티브 (이 슬라이드만)</text>
+  <g font-family="'Courier New', monospace" font-size="13.5">
+    <text x="60" y="394" fill="#c4b5fd">&lt;!-- _class: lead --&gt;</text>
+    <text x="60" y="414" fill="#64748b" font-size="11">표지처럼 가운데 크게</text>
+    <text x="60" y="446" fill="#c4b5fd">&lt;!-- _paginate: false --&gt;</text>
+    <text x="60" y="466" fill="#64748b" font-size="11">이 장만 페이지 번호 숨김</text>
+    <text x="60" y="498" fill="#c4b5fd">&lt;!-- _backgroundColor: #1e293b --&gt;</text>
+    <text x="60" y="518" fill="#64748b" font-size="11">밑줄 _ = 현재 슬라이드에만 적용</text>
+  </g>
+
+  <!-- Panel 4: images & background -->
+  <rect x="560" y="328" width="500" height="216" rx="12" fill="#0b1220" stroke="#16a34a" stroke-width="1.5"/>
+  <path d="M572,328 h476 a12,12 0 0 1 12,12 v30 h-500 v-30 a12,12 0 0 1 12,-12 z" fill="url(#hGr)"/>
+  <text x="580" y="355" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff">④ 이미지 · 배경</text>
+  <g font-family="'Courier New', monospace" font-size="13.5">
+    <text x="580" y="394" fill="#86efac">![w:300](logo.png)</text>
+    <text x="580" y="414" fill="#64748b" font-size="11">너비 300px로 크기 지정</text>
+    <text x="580" y="446" fill="#86efac">![bg](cover.jpg)</text>
+    <text x="580" y="466" fill="#64748b" font-size="11">슬라이드 전체 배경 이미지</text>
+    <text x="580" y="498" fill="#86efac">![bg left:40%](side.png)</text>
+    <text x="580" y="518" fill="#64748b" font-size="11">왼쪽 40% 분할 배경 (2단 레이아웃)</text>
+  </g>
+
+  <text x="550" y="568" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">전역 설정은 front-matter에, 한 장만 바꿀 땐 <tspan font-family="'Courier New', monospace" fill="#c4b5fd">&lt;!-- _밑줄 --&gt;</tspan> 디렉티브를 씁니다.</text>
+</svg>

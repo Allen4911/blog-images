@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520">
+  <defs>
+    <marker id="arrPW" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#007AFF"/>
+    </marker>
+    <marker id="arrPWDown" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto">
+      <path d="M0,0 L6,0 L3,8 z" fill="#007AFF"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="520" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#AF52DE"/>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="26" font-weight="700" fill="#1D1D1F">Playwright 에디터 주입 흐름</text>
+  <text x="600" y="78" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" fill="#6E6E73">쿠키 로그인 세션 &#8594; TinyMCE 주입 &#8594; 필드 채움 &#8594; 스크린샷·창 유지</text>
+
+  <line x1="60" y1="98" x2="1140" y2="98" stroke="#E5E5EA" stroke-width="1"/>
+
+  <!-- ROW 1 (y=115 ~ 250): 4 steps -->
+  <!-- Step box width: ~220px, gap ~18px -->
+  <!-- 4 boxes: 60 + 220 + 18 + 220 + 18 + 220 + 18 + 220 + ... need to fit 1140 -->
+  <!-- 4 * 220 + 3 * 18 = 880 + 54 = 934, left margin = 133 -->
+  <!-- Let's do 4 boxes 210px wide with 22px gaps: 4*210 + 3*22 = 840+66 = 906, margin = 147 -->
+  <!-- Actually let me do: start=60, box=240, gap=24. 4*240+3*24=960+72=1032, too wide -->
+  <!-- start=80, box=220, gap=22. 4*220+3*22=880+66=946, end=80+946=1026. Remaining=174, center: start offset=87 -->
+  <!-- Let's just use x positions: 60, 298, 536, 774, each 234px wide with 4px gap -->
+  <!-- 60+234+4=298, 298+234+4=536, 536+234+4=774, 774+234=1008. Too short. 1200-60-60=1080 / 4 = 270 each, gap=0 doesn't look good -->
+  <!-- 4 boxes of 252px with 24px gaps: 60, 336, 612, 888. End: 888+252=1140. -->
+
+  <!-- Row 1 Step 1: 쿠키 로드 -->
+  <rect x="60" y="115" width="252" height="148" rx="12" fill="#F5F8FF" stroke="#007AFF" stroke-width="1.5"/>
+  <rect x="60" y="115" width="252" height="40" rx="12" fill="#007AFF" opacity="0.1"/>
+  <circle cx="82" cy="135" r="12" fill="#007AFF"/>
+  <text x="82" y="139" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="100" y="139" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#0040CC">쿠키 로드</text>
+
+  <text x="76" y="170" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">Cookie-Editor 확장으로</text>
+  <text x="76" y="188" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">로그인 세션 JSON 추출</text>
+  <rect x="76" y="200" width="220" height="22" rx="6" fill="#F0F0F5"/>
+  <text x="186" y="215" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="10" fill="#6E6E73">tistory_cookies.json</text>
+  <text x="76" y="250" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">httpOnly 쿠키 포함 가능</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="314" y1="189" x2="334" y2="189" stroke="#007AFF" stroke-width="2" marker-end="url(#arrPW)"/>
+
+  <!-- Row 1 Step 2: TinyMCE 대기 -->
+  <rect x="336" y="115" width="252" height="148" rx="12" fill="#FBF5FF" stroke="#AF52DE" stroke-width="1.5"/>
+  <rect x="336" y="115" width="252" height="40" rx="12" fill="#AF52DE" opacity="0.1"/>
+  <circle cx="358" cy="135" r="12" fill="#AF52DE"/>
+  <text x="358" y="139" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="376" y="139" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#7B2AC0">TinyMCE 초기화 대기</text>
+
+  <text x="352" y="170" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">에디터 페이지 이동 후</text>
+  <text x="352" y="188" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">TinyMCE 초기화 완료 확인</text>
+  <rect x="352" y="200" width="220" height="22" rx="6" fill="#F0F0F5"/>
+  <text x="462" y="215" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#6E6E73">tinymce.activeEditor.initialized</text>
+  <text x="352" y="250" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">page.wait_for_function()</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="590" y1="189" x2="610" y2="189" stroke="#007AFF" stroke-width="2" marker-end="url(#arrPW)"/>
+
+  <!-- Row 1 Step 3: 제목 주입 -->
+  <rect x="612" y="115" width="252" height="148" rx="12" fill="#FFFAF2" stroke="#FF9500" stroke-width="1.5"/>
+  <rect x="612" y="115" width="252" height="40" rx="12" fill="#FF9500" opacity="0.1"/>
+  <circle cx="634" cy="135" r="12" fill="#FF9500"/>
+  <text x="634" y="139" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="652" y="139" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#B35800">제목 주입</text>
+
+  <text x="628" y="170" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">textarea[placeholder="제목"]</text>
+  <text x="628" y="188" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">React controlled — native setter</text>
+  <rect x="628" y="200" width="220" height="22" rx="6" fill="#F0F0F5"/>
+  <text x="738" y="215" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#6E6E73">nativeSetter.call(el, title)</text>
+  <text x="628" y="250" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">input + change 이벤트 dispatch</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="866" y1="189" x2="886" y2="189" stroke="#007AFF" stroke-width="2" marker-end="url(#arrPW)"/>
+
+  <!-- Row 1 Step 4: 본문 주입 -->
+  <rect x="888" y="115" width="252" height="148" rx="12" fill="#FFFAF2" stroke="#FF9500" stroke-width="1.5"/>
+  <rect x="888" y="115" width="252" height="40" rx="12" fill="#FF9500" opacity="0.1"/>
+  <circle cx="910" cy="135" r="12" fill="#FF6B00"/>
+  <text x="910" y="139" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="928" y="139" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#B35800">본문 주입</text>
+
+  <text x="904" y="170" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">TinyMCE API 직접 호출</text>
+  <text x="904" y="188" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">HTML 문자열 삽입</text>
+  <rect x="904" y="200" width="220" height="22" rx="6" fill="#F0F0F5"/>
+  <text x="1014" y="215" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#6E6E73">tinymce.setContent(html)</text>
+  <text x="904" y="250" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">fire('change') 이벤트 포함</text>
+
+  <!-- Connecting arrow: end of row1 → start of row2 (down from step 4 box) -->
+  <!-- Arrow goes: right side of step4 box → down → left across bottom → arrow pointing left at row2 start -->
+  <line x1="1014" y1="263" x2="1014" y2="298" stroke="#007AFF" stroke-width="2"/>
+  <line x1="1014" y1="298" x2="186" y2="298" stroke="#007AFF" stroke-width="2"/>
+  <line x1="186" y1="298" x2="186" y2="320" stroke="#007AFF" stroke-width="2" marker-end="url(#arrPWDown)"/>
+
+  <!-- Row label for connection -->
+  <rect x="565" y="286" width="70" height="20" rx="8" fill="#EBF3FF"/>
+  <text x="600" y="300" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#007AFF">계속</text>
+
+  <!-- ROW 2 (y=322 ~ 450): 4 steps -->
+  <!-- Step 5: 카테고리 선택 -->
+  <rect x="60" y="322" width="252" height="142" rx="12" fill="#F5F8FF" stroke="#007AFF" stroke-width="1.5"/>
+  <rect x="60" y="322" width="252" height="40" rx="12" fill="#007AFF" opacity="0.08"/>
+  <circle cx="82" cy="342" r="12" fill="#007AFF"/>
+  <text x="82" y="346" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">5</text>
+  <text x="100" y="346" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#0040CC">카테고리 선택</text>
+
+  <text x="76" y="378" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">#category-btn 클릭 → 목록 열기</text>
+  <rect x="76" y="390" width="220" height="22" rx="6" fill="#F0F0F5"/>
+  <text x="186" y="405" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#6E6E73">#category-list >> text=카테고리명</text>
+  <text x="76" y="428" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">텍스트 매칭으로 클릭</text>
+  <text x="76" y="446" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">목록 닫기 확인</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="314" y1="393" x2="334" y2="393" stroke="#007AFF" stroke-width="2" marker-end="url(#arrPW)"/>
+
+  <!-- Step 6: 태그 입력 -->
+  <rect x="336" y="322" width="252" height="142" rx="12" fill="#F5F8FF" stroke="#007AFF" stroke-width="1.5"/>
+  <rect x="336" y="322" width="252" height="40" rx="12" fill="#007AFF" opacity="0.08"/>
+  <circle cx="358" cy="342" r="12" fill="#007AFF"/>
+  <text x="358" y="346" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">6</text>
+  <text x="376" y="346" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#0040CC">태그 입력</text>
+
+  <text x="352" y="378" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">input#tagText에 태그 입력</text>
+  <rect x="352" y="390" width="220" height="22" rx="6" fill="#F0F0F5"/>
+  <text x="462" y="405" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#6E6E73">fill(tag) + press('Enter')</text>
+  <text x="352" y="428" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">태그마다 반복</text>
+
+  <!-- Arrow 6→7 -->
+  <line x1="590" y1="393" x2="610" y2="393" stroke="#007AFF" stroke-width="2" marker-end="url(#arrPW)"/>
+
+  <!-- Step 7: 스크린샷 저장 -->
+  <rect x="612" y="322" width="252" height="142" rx="12" fill="#F5FFF7" stroke="#34C759" stroke-width="1.5"/>
+  <rect x="612" y="322" width="252" height="40" rx="12" fill="#34C759" opacity="0.08"/>
+  <circle cx="634" cy="342" r="12" fill="#34C759"/>
+  <text x="634" y="346" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">7</text>
+  <text x="652" y="346" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#1A7A35">스크린샷 저장</text>
+
+  <text x="628" y="378" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">주입 결과 PNG 캡처</text>
+  <rect x="628" y="390" width="220" height="22" rx="6" fill="#F0F0F5"/>
+  <text x="738" y="405" text-anchor="middle"
+        font-family="'Courier New', monospace"
+        font-size="9" fill="#6E6E73">page.screenshot(path=...)</text>
+  <text x="628" y="428" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">검토 전 상태 기록용</text>
+
+  <!-- Arrow 7→8 -->
+  <line x1="866" y1="393" x2="886" y2="393" stroke="#007AFF" stroke-width="2" marker-end="url(#arrPW)"/>
+
+  <!-- Step 8: 창 유지 (사람이 발행) -->
+  <rect x="888" y="322" width="252" height="142" rx="12" fill="#F5FFF7" stroke="#34C759" stroke-width="2"/>
+  <rect x="888" y="322" width="252" height="40" rx="12" fill="#34C759" opacity="0.12"/>
+  <circle cx="910" cy="342" r="12" fill="#34C759"/>
+  <text x="910" y="346" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" font-weight="700" fill="#FFFFFF">8</text>
+  <text x="928" y="346" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="13" font-weight="700" fill="#1A7A35">창 유지 · 발행 대기</text>
+
+  <text x="904" y="378" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">브라우저 창 열린 채 유지</text>
+  <text x="904" y="396" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="11" fill="#1D1D1F">사람이 검토 후 직접 발행</text>
+  <rect x="904" y="408" width="220" height="22" rx="6" fill="#E8F9EC"/>
+  <text x="1014" y="423" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#1A7A35">자동화 완료 · 발행은 사람이</text>
+  <text x="904" y="452" font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="10" fill="#6E6E73">의도적 안전장치</text>
+
+  <!-- Footer -->
+  <line x1="60" y1="478" x2="1140" y2="478" stroke="#E5E5EA" stroke-width="1"/>
+  <text x="600" y="504" text-anchor="middle"
+        font-family="'Noto Sans CJK KR', 'Noto Sans KR', sans-serif"
+        font-size="12" fill="#6E6E73">Python playwright · 쿠키 세션 · TinyMCE DOM 직접 조작</text>
+</svg>

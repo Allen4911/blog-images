@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560">
+  <defs>
+    <linearGradient id="bge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="lead" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e"/><stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/></filter>
+  </defs>
+
+  <rect width="1100" height="560" fill="url(#bge)" rx="16"/>
+  <rect width="1100" height="560" fill="none" stroke="#1e293b" stroke-width="2" rx="16"/>
+
+  <text x="550" y="44" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">완성된 슬라이드 — 실제 출력 결과</text>
+  <text x="550" y="67" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#64748b">앞의 마크다운이 이렇게 렌더링됩니다 (HTML · PDF · PPTX 공통)</text>
+
+  <!-- ===== Slide 1: Title (lead) ===== -->
+  <g filter="url(#sh)">
+    <rect x="48" y="96" width="488" height="274" rx="10" fill="url(#lead)"/>
+  </g>
+  <text x="292" y="180" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#a5f3fc" letter-spacing="3">_class: lead</text>
+  <text x="292" y="232" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="40" font-weight="800" fill="#ffffff">Marp로 만든 발표</text>
+  <text x="292" y="270" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#cffafe">마크다운 한 파일로 끝내는 슬라이드</text>
+  <line x1="222" y1="292" x2="362" y2="292" stroke="#67e8f9" stroke-width="2"/>
+  <text x="292" y="322" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" fill="#a5f3fc">Allen · Private Labs</text>
+  <text x="512" y="358" text-anchor="end" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#a5f3fc" opacity="0.8">1</text>
+  <text x="292" y="392" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8">▲ 표지 슬라이드 (lead)</text>
+
+  <!-- ===== Slide 2: Content ===== -->
+  <g filter="url(#sh)">
+    <rect x="564" y="96" width="488" height="274" rx="10" fill="#ffffff"/>
+  </g>
+  <!-- header bar -->
+  <text x="588" y="124" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#94a3b8">My Talk</text>
+  <line x1="588" y1="132" x2="1028" y2="132" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- heading -->
+  <text x="588" y="170" font-family="'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="700" fill="#0f172a">왜 Marp인가</text>
+  <rect x="588" y="180" width="64" height="4" rx="2" fill="#0891b2"/>
+  <!-- bullets -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="15" fill="#334155">
+    <text x="592" y="214">•  텍스트라 <tspan font-weight="700" fill="#0f172a">버전 관리</tspan>가 된다</text>
+    <text x="592" y="242">•  한 소스 → <tspan font-weight="700" fill="#0f172a">PDF·PPTX·HTML</tspan></text>
+    <text x="592" y="270">•  디자인은 <tspan font-weight="700" fill="#0f172a">테마</tspan>에 맡긴다</text>
+  </g>
+  <!-- mini code block -->
+  <rect x="588" y="286" width="300" height="42" rx="6" fill="#0f172a"/>
+  <text x="602" y="312" font-family="'Courier New', monospace" font-size="13" fill="#67e8f9">marp deck.md --pdf</text>
+  <!-- footer + pagination -->
+  <line x1="588" y1="344" x2="1028" y2="344" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="588" y="360" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#cbd5e1">© 2026 Private Labs</text>
+  <text x="1028" y="360" text-anchor="end" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#94a3b8">2</text>
+  <text x="808" y="392" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8">▲ 본문 슬라이드 (header · 본문 · 페이지번호)</text>
+
+  <!-- callouts row -->
+  <g font-family="'Segoe UI', system-ui, sans-serif">
+    <rect x="48" y="424" width="320" height="96" rx="10" fill="#0b1220" stroke="#0891b2" stroke-width="1.2"/>
+    <text x="68" y="452" font-size="14" font-weight="700" fill="#67e8f9">paginate</text>
+    <text x="68" y="476" font-size="12.5" fill="#cbd5e1">우하단 페이지 번호가</text>
+    <text x="68" y="496" font-size="12.5" fill="#cbd5e1">자동으로 매겨집니다.</text>
+
+    <rect x="390" y="424" width="320" height="96" rx="10" fill="#0b1220" stroke="#d97706" stroke-width="1.2"/>
+    <text x="410" y="452" font-size="14" font-weight="700" fill="#fbbf24">header / footer</text>
+    <text x="410" y="476" font-size="12.5" fill="#cbd5e1">모든 슬라이드 상·하단에</text>
+    <text x="410" y="496" font-size="12.5" fill="#cbd5e1">같은 텍스트가 반복됩니다.</text>
+
+    <rect x="732" y="424" width="320" height="96" rx="10" fill="#0b1220" stroke="#7c3aed" stroke-width="1.2"/>
+    <text x="752" y="452" font-size="14" font-weight="700" fill="#c4b5fd">_class: lead</text>
+    <text x="752" y="476" font-size="12.5" fill="#cbd5e1">표지 한 장만 가운데</text>
+    <text x="752" y="496" font-size="12.5" fill="#cbd5e1">정렬로 강조했습니다.</text>
+  </g>
+</svg>
